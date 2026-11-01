@@ -1,15 +1,6 @@
+#include "helper_cuda.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-#define checkCudaErrors(call)                                                  \
-    do {                                                                       \
-        cudaError_t res = call;                                                \
-        if (res != cudaSuccess) {                                              \
-            fprintf(stderr, "ERROR in %s:%d. Message: %s\n", __FILE__,         \
-                    __LINE__, cudaGetErrorString(res));                        \
-            exit(EXIT_FAILURE);                                                \
-        }                                                                      \
-    } while (0)
 
 #define MAX_CLASSES 32
 
